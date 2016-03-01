@@ -1,0 +1,38 @@
+client1 -> Login = {"command":"login","username":"root"} 
+
+client2 -> getList={"command":"getList"} 
+
+client3 -> sendMessage={"command":"message","to":"receiver","text":"Hi"} 
+
+client4 -> Logout={"command":"logout"} 
+
+client5 -> controlSendLog={"command":"controlSendLog"} 
+
+
+
+
+
+
+
+
+
+server1 -> answerLogin={"command":"answerLogin","text":"Login is accepted"}
+
+server2 -> answerList={"command":"answerList","text":"root online" }
+
+server3 -> newMessage={"command":"newMessage","from":"root","text":"hello world"}
+
+server4 -> LoginFault={"command":LoginFault","text":"This user already online" }
+
+server5 -> permissionDenied={"command":permissionDenied","text":"You are logout anymore" }
+
+server6 -> answerLogout={"command":"answerLogout","text":"You are logout anymore"}
+
+server7 -> notFoundUser={"command":"notFoundUser","text":"User Not Found. You do not send message"}
+
+server8 -> answerControlSendFault={"command":"answerControlSendFault","text":"But first,let you join"}
+
+server9 -> answerControlSendCorrect={"command":"answerControlSendCorrect","text":"true"}
+
+
+
